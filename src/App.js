@@ -1,16 +1,21 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {ListCfdi} from './pages/cfdi/list';
+import {CreateCfdi} from './pages/cfdi/create';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom"
 
 function App() {
   return (
     <div >
-      <h1>Test</h1>
+      <Router>
+        <Switch>
+          <Route  path='/'  component={ListCfdi}/>
+          <Route  path='/create'  component={CreateCfdi}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
